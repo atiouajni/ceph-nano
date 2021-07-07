@@ -115,3 +115,23 @@ spec:
       - name: cn-etcceph
         persistentVolumeClaim:
         claimName: cn-pv-claim-etc
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: ceph-nano
+  namespace: ceph-nano
+  labels:
+    app: ceph
+    daemon: nano
+spec:
+  host: ceph-nano-ceph-nano.apps.ocp4.ouachani.org #match with your RGW_NAME env variable name
+  to:
+    kind: Service
+    name: ceph-nano-s3
+    weight: 100
+  port:
+    targetPort: cn-s3
+  tls:
+    termination: edge
+  wildcardPolicy: None
