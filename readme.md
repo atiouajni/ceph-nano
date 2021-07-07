@@ -26,8 +26,8 @@ Test :
 2 - s3cmd --configure
 
 New settings:
-  Access Key: A89KG9A87BAE08C4H25W
-  Secret Key: krl0XinZFCPu1rCK0ldpR8XyYNZgZwml4CwtQxc2
+  Access Key: XXXX
+  Secret Key: XXXX
   Default Region: US
   S3 Endpoint: ceph-nano-ceph-nano.apps.ocp4.ouachani.org
   DNS-style bucket+hostname:port template for accessing a bucket: ceph-nano-ceph-nano.apps.ocp4.ouachani.org
