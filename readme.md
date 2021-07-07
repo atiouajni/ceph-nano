@@ -38,6 +38,14 @@ New settings:
   HTTP Proxy server port: 0
 
 
+3) Test it (example using s3cmd)
+s3cmd mb s3://foobucket
+date > test.txt
+s3cmd put ./test.txt s3://foobucket
+s3cmd ls s3://foobucket
+s3cmd get s3://foobucket/test.txt froms3.txt
+
+
 Difference between the original manifest provided by Ceph-nano :
 
 1 - Indentation are incorrect
